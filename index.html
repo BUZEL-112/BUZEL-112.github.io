@@ -1,437 +1,376 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name — Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Geist+Mono:wght@300;400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    :root {
-      --bg: #f7f5f2;
-      --ink: #1a1917;
-      --muted: #8a8680;
-      --accent: #c9732a;
-      --border: #e2dfd9;
-      --surface: #efecea;
-      --serif: 'Cormorant Garamond', Georgia, serif;
-      --sans: 'Outfit', sans-serif;
-      --mono: 'Geist Mono', monospace;
-    }
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Your Name - Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary": "#ffd0e3",
+                      "on-tertiary-fixed": "#3d0026",
+                      "on-secondary": "#4f2500",
+                      "surface-container-lowest": "#000000",
+                      "tertiary-container": "#ffa6cf",
+                      "surface-container-highest": "#222222",
+                      "surface-bright": "#343a3c",
+                      "primary": "#8aebff",
+                      "on-error": "#690005",
+                      "surface-tint": "#2fd9f4",
+                      "surface-variant": "#2f3638",
+                      "error-container": "#93000a",
+                      "inverse-surface": "#dde4e5",
+                      "on-surface": "#dde4e5",
+                      "on-secondary-container": "#451f00",
+                      "tertiary-fixed-dim": "#ffafd3",
+                      "on-primary-container": "#005763",
+                      "on-tertiary-fixed-variant": "#85145a",
+                      "on-primary": "#00363e",
+                      "tertiary-fixed": "#ffd8e7",
+                      "inverse-primary": "#006877",
+                      "on-error-container": "#ffdad6",
+                      "on-surface-variant": "#bbc9cd",
+                      "primary-fixed-dim": "#2fd9f4",
+                      "surface-container-high": "#1a1a1a",
+                      "on-primary-fixed-variant": "#004e5a",
+                      "secondary": "#ffb783",
+                      "on-secondary-fixed": "#301400",
+                      "inverse-on-surface": "#2b3233",
+                      "outline-variant": "#3c494c",
+                      "primary-container": "#22d3ee",
+                      "secondary-fixed": "#ffdcc5",
+                      "error": "#ffb4ab",
+                      "surface-dim": "#000000",
+                      "surface-container-low": "#0b0b0b",
+                      "on-secondary-fixed-variant": "#713700",
+                      "on-background": "#dde4e5",
+                      "outline": "#859397",
+                      "on-tertiary": "#620040",
+                      "surface": "#000000",
+                      "surface-container": "#111111",
+                      "on-tertiary-container": "#8f1e62",
+                      "secondary-fixed-dim": "#ffb783",
+                      "background": "#000000",
+                      "secondary-container": "#d97722",
+                      "on-primary-fixed": "#001f25",
+                      "primary-fixed": "#a2eeff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "sm": "16px",
+                      "border-width": "4px",
+                      "xl": "80px",
+                      "margin": "24px",
+                      "lg": "48px",
+                      "xs": "8px",
+                      "gutter": "24px",
+                      "md": "24px",
+                      "base": "4px",
+                      "shadow-offset": "8px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "JetBrains Mono"
+                      ],
+                      "code-block": [
+                              "JetBrains Mono"
+                      ],
+                      "body-md": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-lg": [
+                              "JetBrains Mono"
+                      ],
+                      "label-sm": [
+                              "Space Mono"
+                      ],
+                      "headline-lg-mobile": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-xl": [
+                              "JetBrains Mono"
+                      ],
+                      "body-lg": [
+                              "JetBrains Mono"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "code-block": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.7",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        /* Dot matrix background */
+        .dot-matrix {
+            background-image: radial-gradient(circle, #3c494c 1px, transparent 1px);
+            background-size: 16px 16px;
+        }
 
-    html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--bg);
-      color: var(--ink);
-      font-family: var(--sans);
-      font-weight: 300;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ── Layout ── */
-    .container { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
-
-    /* ── Nav ── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0;
-      z-index: 100;
-      padding: 1.4rem 0;
-      background: rgba(247,245,242,0.88);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.3s;
-    }
-    nav.scrolled { border-color: var(--border); }
-    .nav-inner {
-      max-width: 780px; margin: 0 auto; padding: 0 2rem;
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .nav-logo {
-      font-family: var(--serif);
-      font-size: 1.15rem;
-      letter-spacing: 0.01em;
-      color: var(--ink);
-      text-decoration: none;
-    }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a {
-      font-size: 0.8rem;
-      font-weight: 400;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--ink); }
-
-    /* ── Hero ── */
-    #hero {
-      padding: 14rem 0 8rem;
-      opacity: 0; transform: translateY(22px);
-      animation: fadeUp 0.9s cubic-bezier(.22,1,.36,1) 0.1s forwards;
-    }
-    .hero-label {
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1.2rem;
-    }
-    .hero-name {
-      font-family: var(--serif);
-      font-size: clamp(3rem, 8vw, 5.5rem);
-      font-weight: 300;
-      line-height: 1.05;
-      letter-spacing: -0.01em;
-      margin-bottom: 1.6rem;
-    }
-    .hero-name em { font-style: italic; color: var(--muted); }
-    .hero-bio {
-      font-size: 1.05rem;
-      color: var(--muted);
-      max-width: 480px;
-      line-height: 1.8;
-    }
-    .hero-cta {
-      margin-top: 2.8rem;
-      display: flex; align-items: center; gap: 2rem;
-      flex-wrap: wrap;
-    }
-    .btn {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      padding: 0.75rem 1.6rem;
-      font-family: var(--sans);
-      font-size: 0.82rem;
-      font-weight: 400;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 2px;
-      transition: all 0.2s;
-    }
-    .btn-primary {
-      background: var(--ink);
-      color: var(--bg);
-    }
-    .btn-primary:hover { background: var(--accent); }
-    .btn-ghost {
-      color: var(--muted);
-      border-bottom: 1px solid var(--border);
-      padding: 0.75rem 0;
-    }
-    .btn-ghost:hover { color: var(--ink); border-color: var(--ink); }
-
-    /* ── Divider ── */
-    .section-divider {
-      height: 1px;
-      background: var(--border);
-      margin: 0;
-    }
-
-    /* ── Section base ── */
-    section { padding: 6rem 0; }
-    .section-label {
-      font-family: var(--mono);
-      font-size: 0.68rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 3rem;
-    }
-
-    /* ── About ── */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: start;
-    }
-    .about-text h2 {
-      font-family: var(--serif);
-      font-size: 2rem;
-      font-weight: 300;
-      line-height: 1.25;
-      margin-bottom: 1.2rem;
-    }
-    .about-text p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1rem; }
-    .skills-list { list-style: none; }
-    .skills-list li {
-      display: flex; align-items: center; gap: 0.8rem;
-      padding: 0.7rem 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 0.88rem;
-      color: var(--muted);
-    }
-    .skills-list li:last-child { border-bottom: none; }
-    .skills-list li::before {
-      content: '';
-      width: 4px; height: 4px;
-      border-radius: 50%;
-      background: var(--accent);
-      flex-shrink: 0;
-    }
-
-    /* ── Projects ── */
-    .projects-grid {
-      display: grid;
-      gap: 1.5px;
-      background: var(--border);
-      border: 1px solid var(--border);
-    }
-    .project-card {
-      background: var(--bg);
-      padding: 2rem 2.2rem;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 1rem;
-      align-items: start;
-      transition: background 0.2s;
-      text-decoration: none;
-      color: inherit;
-    }
-    .project-card:hover { background: var(--surface); }
-    .project-card:hover .project-arrow { transform: translate(3px, -3px); }
-    .project-tag {
-      font-family: var(--mono);
-      font-size: 0.65rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.5rem;
-    }
-    .project-title {
-      font-family: var(--serif);
-      font-size: 1.35rem;
-      font-weight: 400;
-      margin-bottom: 0.4rem;
-    }
-    .project-desc { font-size: 0.85rem; color: var(--muted); max-width: 420px; }
-    .project-arrow {
-      font-size: 1.2rem;
-      color: var(--muted);
-      transition: transform 0.2s;
-      padding-top: 0.2rem;
-    }
-
-    /* ── Contact ── */
-    .contact-inner { max-width: 520px; }
-    .contact-inner h2 {
-      font-family: var(--serif);
-      font-size: 2.4rem;
-      font-weight: 300;
-      line-height: 1.2;
-      margin-bottom: 1rem;
-    }
-    .contact-inner h2 em { font-style: italic; color: var(--muted); }
-    .contact-inner p { color: var(--muted); font-size: 0.95rem; margin-bottom: 2rem; }
-    .contact-links { display: flex; gap: 1.2rem; flex-wrap: wrap; }
-    .contact-link {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      font-family: var(--mono);
-      font-size: 0.75rem;
-      letter-spacing: 0.08em;
-      color: var(--muted);
-      text-decoration: none;
-      padding-bottom: 2px;
-      border-bottom: 1px solid var(--border);
-      transition: color 0.2s, border-color 0.2s;
-    }
-    .contact-link:hover { color: var(--ink); border-color: var(--ink); }
-
-    /* ── Footer ── */
-    footer {
-      padding: 2.5rem 0;
-      border-top: 1px solid var(--border);
-    }
-    .footer-inner {
-      max-width: 780px; margin: 0 auto; padding: 0 2rem;
-      display: flex; justify-content: space-between; align-items: center;
-      flex-wrap: wrap; gap: 1rem;
-    }
-    .footer-copy {
-      font-family: var(--mono);
-      font-size: 0.68rem;
-      letter-spacing: 0.08em;
-      color: var(--muted);
-    }
-    .footer-built {
-      font-family: var(--mono);
-      font-size: 0.68rem;
-      letter-spacing: 0.08em;
-      color: var(--border);
-    }
-    .footer-built span { color: var(--accent); }
-
-    /* ── Animations ── */
-    @keyframes fadeUp {
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .reveal {
-      opacity: 0; transform: translateY(16px);
-      transition: opacity 0.7s cubic-bezier(.22,1,.36,1), transform 0.7s cubic-bezier(.22,1,.36,1);
-    }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-
-    /* ── Responsive ── */
-    @media (max-width: 600px) {
-      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .nav-links { display: none; }
-      #hero { padding: 10rem 0 6rem; }
-    }
-  </style>
+        /* Blinking cursor */
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        .cursor-blink {
+            animation: blink 1s step-end infinite;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-background text-on-background font-body-md text-body-md dot-matrix min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-background w-full border-b-4 border-on-background shadow-[8px_8px_0px_0px_#2fd9f4] sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin py-sm max-w-full">
+<div class="font-headline-xl text-headline-xl font-extrabold text-primary tracking-tighter">
+                TERMINAL.EXE
+            </div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="text-on-primary-container bg-primary-container border-2 border-on-background px-4 py-1 font-headline-md text-headline-md" href="#projects">PROJECTS</a>
+<a class="text-on-background hover:text-primary px-4 py-1 font-headline-md text-headline-md" href="#skills">Your Name</a>
+<a class="text-on-background hover:text-primary px-4 py-1 font-headline-md text-headline-md" href="#logs">LOGS</a>
+<a class="text-on-background hover:text-primary px-4 py-1 font-headline-md text-headline-md" href="#contact">CONTACT</a>
+<button class="bg-secondary text-on-secondary border-4 border-on-background shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all p-2 flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="dark_mode" data-weight="fill">dark_mode</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow p-margin md:p-lg flex flex-col gap-xl max-w-7xl mx-auto w-full">
+<!-- Hero Section -->
+<section class="flex flex-col lg:flex-row gap-lg items-center mt-xl">
+<div class="flex-1 flex flex-col gap-md">
+<h1 class="font-headline-xl text-headline-xl lg:text-[72px] lg:leading-[1] text-primary uppercase border-4 border-primary p-4 inline-block bg-background shadow-[8px_8px_0px_0px_#2fd9f4]">Your Name - What You Do</h1>
+<p class="font-body-lg text-body-lg max-w-2xl bg-surface-container border-4 border-on-background p-4 shadow-[8px_8px_0px_0px_#fb923c]">&gt; Accessing mainframe...<br/>&gt; A short line or two about who you are — your craft, your focus, the kind of problems you love solving.</p>
+<div class="flex gap-4 mt-sm">
+<button class="bg-primary text-on-primary border-4 border-on-background shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_#2fd9f4] px-8 py-3 font-headline-md text-headline-md hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[4px_4px_0px_0px_#2fd9f4] active:translate-x-[8px] active:translate-y-[8px] active:shadow-none transition-all uppercase">
+                        Deploy
+                    </button>
+<button class="bg-secondary text-on-secondary border-4 border-on-background shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_#fb923c] px-8 py-3 font-headline-md text-headline-md hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[4px_4px_0px_0px_#fb923c] active:translate-x-[8px] active:translate-y-[8px] active:shadow-none transition-all uppercase">
+                        Debug
+                    </button>
+</div>
+</div>
+<div class="flex-1 w-full max-w-lg">
+<!-- Terminal Window -->
+<div class="bg-surface border-4 border-on-background shadow-[8px_8px_0px_0px_#2fd9f4] flex flex-col">
+<!-- Title Bar -->
+<div class="bg-on-background flex items-center p-2 border-b-4 border-on-background gap-2">
+<div class="w-3 h-3 bg-[#ff00ff] border-2 border-background"></div>
+<div class="w-3 h-3 bg-[#ffbf00] border-2 border-background"></div>
+<div class="w-3 h-3 bg-[#00ffff] border-2 border-background"></div>
+<span class="text-background font-label-sm text-label-sm ml-2">config.json</span>
+</div>
+<!-- Viewport -->
+<div class="p-4 font-code-block text-code-block text-primary overflow-x-auto">
+<pre><code>{
+  "id": "dev_01",
+  "name": "Your Name",
+  "role": "What You Do",
+  "status": "ONLINE",
+  "stack": [
+    "Python / FastAPI",
+    "Cloud Infrastructure (AWS / OCI)",
+    "Docker &amp; Kubernetes",
+    "React / TypeScript",
+    "ML / AI tooling",
+    "CI/CD &amp; DevOps"
+  ],
+  "location": "Sector 7G"
+}<span class="cursor-blink bg-primary w-2 h-4 inline-block align-middle ml-1"></span></code></pre>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="mt-xl flex flex-col gap-md" id="projects">
+<h2 class="font-headline-lg text-headline-lg uppercase border-b-4 border-primary inline-block self-start pr-8 pb-2 text-primary">
+<span class="text-secondary">&gt;</span> PROJECTS
+            </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg mt-md">
+<div class="bg-surface border-4 border-on-background shadow-[8px_8px_0px_0px_#2fd9f4] flex flex-col hover:-translate-y-2 transition-transform duration-300 group">
+<div class="bg-on-background flex items-center p-2 border-b-4 border-on-background gap-2">
+<div class="w-3 h-3 bg-[#ff00ff] border-2 border-background"></div>
+<div class="w-3 h-3 bg-[#ffbf00] border-2 border-background"></div>
+<div class="w-3 h-3 bg-[#00ffff] border-2 border-background"></div>
+<span class="text-background font-label-sm text-label-sm ml-2">PROJECT_01</span>
+</div>
+<div class="h-48 border-b-4 border-on-background bg-surface-container relative overflow-hidden group-hover:bg-primary/20 transition-colors">
+<img class="w-full h-full object-cover mix-blend-screen opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaJ_PMxgLRQX6vrrDxBX6Gk8zDPxmPzz0n4EiRTV8pUSOG8hdCBFqOE_C8iY8B02uV-b5O5kd_oOA0x01A8ELHiFUg6cbf7EcpYJ7enIn2M10TX48zswUZ56kaUFovkMudLxprbauDPcslEyyztoLg2U49gGL3QOHVorab-Prjs8YK01rpf02gxUyfhQLhgUb2362RHkVSjzL4PDpdQ15nF9wK41ab_JZHRmC8vVc_gCy0vRdLtZN_P1Lgi4tNyqBsFNErfPB442I"/>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<h3 class="font-headline-md text-headline-md text-[#2fd9f4]">Project One</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">A short description of what this project does, the problem it solves, and the interesting tech behind it.</p>
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="px-2 py-1 border-2 border-[#2fd9f4] text-[#2fd9f4] font-label-sm text-label-sm uppercase">Python</span><span class="px-2 py-1 border-2 border-[#2fd9f4] text-[#2fd9f4] font-label-sm text-label-sm uppercase">Cloud</span>
+</div>
+</div>
+</div>
 
-  <!-- Nav -->
-  <nav id="navbar">
-    <div class="nav-inner">
-      <a class="nav-logo" href="#">Your Name</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+<div class="bg-surface border-4 border-on-background shadow-[8px_8px_0px_0px_#fb923c] flex flex-col hover:-translate-y-2 transition-transform duration-300 group">
+<div class="bg-on-background flex items-center p-2 border-b-4 border-on-background gap-2">
+<div class="w-3 h-3 bg-[#ff00ff] border-2 border-background"></div>
+<div class="w-3 h-3 bg-[#ffbf00] border-2 border-background"></div>
+<div class="w-3 h-3 bg-[#00ffff] border-2 border-background"></div>
+<span class="text-background font-label-sm text-label-sm ml-2">PROJECT_02</span>
+</div>
+<div class="h-48 border-b-4 border-on-background bg-surface-container relative overflow-hidden group-hover:bg-secondary/20 transition-colors">
+<img class="w-full h-full object-cover mix-blend-screen opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBsyIa90smJHU5yDyRUNcBNxaKVca_kjHVGuniohbjDynrKihnIudL-s8mChNxpcQbBhBm0Ypm-EiS3S47k8CKJZNxIko5n_LQemWMwDP41HAGWC4jpJ5SZm8rHwpdiWBk1ofdSrUyXnqmDNHcUv9YA845bitbR6dYll_wFlnQaBBc0VOGPP3uX-eBtP6MeEGwAy4g8q0B9ReyC_LpeQ58XJze-maKb4VJIM_alLJpDHFm0VBBuD0yyEdHUXAhrYe8KuyUkNj5NpE"/>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<h3 class="font-headline-md text-headline-md text-[#fb923c]">Project Two</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">A short description of what this project does, the problem it solves, and the interesting tech behind it.</p>
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="px-2 py-1 border-2 border-[#fb923c] text-[#fb923c] font-label-sm text-label-sm uppercase">ML</span><span class="px-2 py-1 border-2 border-[#fb923c] text-[#fb923c] font-label-sm text-label-sm uppercase">API</span>
+</div>
+</div>
+</div>
 
-  <!-- Hero -->
-  <div class="container">
-    <section id="hero">
-      <p class="hero-label">Available for work</p>
-      <h1 class="hero-name">Your Name<br /><em>& What You Do</em></h1>
-      <p class="hero-bio">
-        A short line or two about who you are — your craft, your focus, the kind of problems you love solving.
-      </p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">View Work ↓</a>
-        <a href="#contact" class="btn btn-ghost">Get in touch →</a>
-      </div>
-    </section>
-  </div>
+<div class="bg-surface border-4 border-on-background shadow-[8px_8px_0px_0px_#ff00ff] flex flex-col hover:-translate-y-2 transition-transform duration-300 group">
+<div class="bg-on-background flex items-center p-2 border-b-4 border-on-background gap-2">
+<div class="w-3 h-3 bg-[#ff00ff] border-2 border-background"></div>
+<div class="w-3 h-3 bg-[#ffbf00] border-2 border-background"></div>
+<div class="w-3 h-3 bg-[#00ffff] border-2 border-background"></div>
+<span class="text-background font-label-sm text-label-sm ml-2">PROJECT_03</span>
+</div>
+<div class="h-48 border-b-4 border-on-background bg-surface-container relative overflow-hidden group-hover:bg-tertiary/20 transition-colors">
+<img class="w-full h-full object-cover mix-blend-screen opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1KgZLyxzgzedtJRz8ruAw-VDso4eKIaFPYusGCzjYBe4PLXyJr6_jTIJjpxkVXpPlP0zvTogoFCaevZEynJ5q3l7t0Kp_MgDk_a757AAhWh7d5AzahPPXsgvHvDN79bBCoypdrBKdcYv-ucHHwXsWsJRb7-Tt-fm0Jm-_q5j7QN_3hyAnqH824aTbqxNoCHsvpOQYE5l8tRjgrOqKALnNdIABOtE5kN0C5-YY6CnweL09ZiO1LPjPJaR_8sUtyDhfYuA4gRVvm8I"/>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<h3 class="font-headline-md text-headline-md text-[#ff00ff]">Project Three</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">A short description of what this project does, the problem it solves, and the interesting tech behind it.</p>
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="px-2 py-1 border-2 border-[#ff00ff] text-[#ff00ff] font-label-sm text-label-sm uppercase">Full-stack</span>
+</div>
+</div>
+</div>
 
-  <div class="section-divider"></div>
+<div class="bg-surface border-4 border-on-background shadow-[8px_8px_0px_0px_#2fd9f4] flex flex-col hover:-translate-y-2 transition-transform duration-300 group">
+<div class="bg-on-background flex items-center p-2 border-b-4 border-on-background gap-2">
+<div class="w-3 h-3 bg-[#ff00ff] border-2 border-background"></div>
+<div class="w-3 h-3 bg-[#ffbf00] border-2 border-background"></div>
+<div class="w-3 h-3 bg-[#00ffff] border-2 border-background"></div>
+<span class="text-background font-label-sm text-label-sm ml-2">PROJECT_04</span>
+</div>
+<div class="h-48 border-b-4 border-on-background bg-surface-container relative overflow-hidden group-hover:bg-primary/20 transition-colors">
+<img class="w-full h-full object-cover mix-blend-screen opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaJ_PMxgLRQX6vrrDxBX6Gk8zDPxmPzz0n4EiRTV8pUSOG8hdCBFqOE_C8iY8B02uV-b5O5kd_oOA0x01A8ELHiFUg6cbf7EcpYJ7enIn2M10TX48zswUZ56kaUFovkMudLxprbauDPcslEyyztoLg2U49gGL3QOHVorab-Prjs8YK01rpf02gxUyfhQLhgUb2362RHkVSjzL4PDpdQ15nF9wK41ab_JZHRmC8vVc_gCy0vRdLtZN_P1Lgi4tNyqBsFNErfPB442I"/>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<h3 class="font-headline-md text-headline-md text-[#2fd9f4]">Project Four</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">A short description of what this project does, the problem it solves, and the interesting tech behind it.</p>
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="px-2 py-1 border-2 border-[#2fd9f4] text-[#2fd9f4] font-label-sm text-label-sm uppercase">DevOps</span><span class="px-2 py-1 border-2 border-[#2fd9f4] text-[#2fd9f4] font-label-sm text-label-sm uppercase">Infra</span>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-  <!-- About -->
-  <div class="container">
-    <section id="about" class="reveal">
-      <p class="section-label">// 01 — About</p>
-      <div class="about-grid">
-        <div class="about-text">
-          <h2>Building things that<br />actually work.</h2>
-          <p>I'm a [your role] based in [your city]. I care about clean code, thoughtful design, and shipping things that make a real difference.</p>
-          <p>When I'm not building, I'm probably reading, experimenting with new tools, or writing about what I've learned.</p>
-        </div>
-        <div>
-          <p class="section-label" style="margin-bottom:1.2rem">// Skills</p>
-          <ul class="skills-list">
-            <li>Python / FastAPI</li>
-            <li>Cloud Infrastructure (AWS / OCI)</li>
-            <li>Docker & Kubernetes</li>
-            <li>React / TypeScript</li>
-            <li>ML / AI tooling</li>
-            <li>CI/CD & DevOps</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <div class="section-divider"></div>
-
-  <!-- Projects -->
-  <div class="container">
-    <section id="projects" class="reveal">
-      <p class="section-label">// 02 — Projects</p>
-      <div class="projects-grid">
-
-        <a href="#" class="project-card">
-          <div>
-            <p class="project-tag">Python · Cloud</p>
-            <h3 class="project-title">Project One</h3>
-            <p class="project-desc">A short description of what this project does, the problem it solves, and the interesting tech behind it.</p>
-          </div>
-          <span class="project-arrow">↗</span>
-        </a>
-
-        <a href="#" class="project-card">
-          <div>
-            <p class="project-tag">ML · API</p>
-            <h3 class="project-title">Project Two</h3>
-            <p class="project-desc">A short description of what this project does, the problem it solves, and the interesting tech behind it.</p>
-          </div>
-          <span class="project-arrow">↗</span>
-        </a>
-
-        <a href="#" class="project-card">
-          <div>
-            <p class="project-tag">Full-stack</p>
-            <h3 class="project-title">Project Three</h3>
-            <p class="project-desc">A short description of what this project does, the problem it solves, and the interesting tech behind it.</p>
-          </div>
-          <span class="project-arrow">↗</span>
-        </a>
-
-        <a href="#" class="project-card">
-          <div>
-            <p class="project-tag">DevOps · Infra</p>
-            <h3 class="project-title">Project Four</h3>
-            <p class="project-desc">A short description of what this project does, the problem it solves, and the interesting tech behind it.</p>
-          </div>
-          <span class="project-arrow">↗</span>
-        </a>
-
-      </div>
-    </section>
-  </div>
-
-  <div class="section-divider"></div>
-
-  <!-- Contact -->
-  <div class="container">
-    <section id="contact" class="reveal">
-      <p class="section-label">// 03 — Contact</p>
-      <div class="contact-inner">
-        <h2>Let's build<br /><em>something together.</em></h2>
-        <p>Open to freelance work, full-time roles, and interesting collaborations. Drop me a message or find me online.</p>
-        <div class="contact-links">
-          <a href="mailto:you@email.com" class="contact-link">✉ you@email.com</a>
-          <a href="https://github.com/yourusername" class="contact-link" target="_blank">⌥ GitHub</a>
-          <a href="https://linkedin.com/in/yourusername" class="contact-link" target="_blank">◈ LinkedIn</a>
-          <a href="https://twitter.com/yourusername" class="contact-link" target="_blank">◇ Twitter</a>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-inner">
-      <p class="footer-copy">© 2026 Your Name. All rights reserved.</p>
-      <p class="footer-built">Built with <span>HTML</span> — hosted on GitHub Pages</p>
-    </div>
-  </footer>
-
-  <script>
-    // Scroll-based nav border
-    const nav = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 20);
-    });
-
-    // Reveal on scroll
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver(
-      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
-      { threshold: 0.1 }
-    );
-    reveals.forEach(el => observer.observe(el));
-  </script>
-
-</body>
-</html>
+<section class="mt-xl flex flex-col gap-md" id="contact">
+<h2 class="font-headline-lg text-headline-lg uppercase border-b-4 border-primary inline-block self-start pr-8 pb-2 text-primary">
+<span class="text-secondary">&gt;</span> CONTACT
+            </h2>
+<div class="bg-surface border-4 border-on-background shadow-[8px_8px_0px_0px_#2fd9f4] p-lg flex flex-col gap-md mt-md">
+<h3 class="font-headline-md text-headline-md text-primary">Let's build something together.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Open to freelance work, full-time roles, and interesting collaborations. Drop me a message or find me online.</p>
+<div class="flex flex-wrap gap-4 mt-4">
+<a class="px-4 py-2 border-2 border-secondary text-secondary font-label-sm text-label-sm uppercase hover:bg-secondary hover:text-on-secondary transition-colors" href="mailto:you@email.com" target="_blank">
+                    ✉ you@email.com
+                </a>
+<a class="px-4 py-2 border-2 border-secondary text-secondary font-label-sm text-label-sm uppercase hover:bg-secondary hover:text-on-secondary transition-colors" href="https://github.com/yourusername" target="_blank">
+                    ⌥ GitHub
+                </a>
+<a class="px-4 py-2 border-2 border-secondary text-secondary font-label-sm text-label-sm uppercase hover:bg-secondary hover:text-on-secondary transition-colors" href="https://linkedin.com/in/yourusername" target="_blank">
+                    ◈ LinkedIn
+                </a>
+<a class="px-4 py-2 border-2 border-secondary text-secondary font-label-sm text-label-sm uppercase hover:bg-secondary hover:text-on-secondary transition-colors" href="https://twitter.com/yourusername" target="_blank">
+                    ◇ Twitter
+                </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container w-full border-t-4 border-on-background mt-lg">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin py-lg w-full max-w-7xl mx-auto">
+<div class="font-headline-md text-headline-md text-on-surface mb-4 md:mb-0">
+                ©2024 PORTFOLIO_OS_V1.0
+            </div>
+<div class="flex gap-md font-label-sm text-label-sm"><a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase" href="mailto:you@email.com">✉ you@email.com</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase" href="https://github.com/yourusername">⌥ GitHub</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase" href="https://linkedin.com/in/yourusername">◈ LinkedIn</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase" href="https://twitter.com/yourusername">◇ Twitter</a>
+</div>
+</div>
+</footer>
+</body></html>
