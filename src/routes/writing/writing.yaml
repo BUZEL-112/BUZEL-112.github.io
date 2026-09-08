@@ -1,0 +1,31 @@
+logs:
+  - title: "Log Entry: Initial Project Architecture"
+    date: 2024-04-10
+    summary: >
+      An overview of how this blog post is rendered directly from an HTML file
+      within the template.
+    link: "/writing/logs/sample-log"
+
+technology:
+  - title: "[Article Title] Example Technical Post"
+    date: 2024-01-15
+    summary: >
+      A concise summary of the topic covered, technical problem solved, or
+      engineering lessons learned.
+    link: "https://example.com"
+
+notes:
+  - title: "[Notes Title] Reference Guide or Cheat Sheet"
+    date: 2023-11-01
+    summary: >
+      Brief notes, cheat sheets, or key learnings on algorithms, tools, or
+      frameworks.
+    link: "https://example.com"
+
+papers:
+  - title: "[Publication Title] Research Paper or Report"
+    date: 2023-05-10
+    summary: >
+      Abstract or synopsis of your research findings, thesis, or technical
+      report.
+    link: "https://example.com"

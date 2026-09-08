@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <rect width="600" height="400" fill="#fafafa" stroke="#e5e7eb" stroke-width="2" rx="6" />
+  <rect x="30" y="30" width="540" height="35" rx="4" fill="#f3f4f6" />
+  <circle cx="55" cy="47" r="6" fill="#e5e7eb" />
+  <circle cx="75" cy="47" r="6" fill="#e5e7eb" />
+  <circle cx="95" cy="47" r="6" fill="#e5e7eb" />
+  <rect x="30" y="85" width="260" height="18" rx="3" fill="#e5e7eb" />
+  <rect x="30" y="115" width="540" height="12" rx="3" fill="#f3f4f6" />
+  <rect x="30" y="135" width="480" height="12" rx="3" fill="#f3f4f6" />
+  <rect x="30" y="155" width="360" height="12" rx="3" fill="#f3f4f6" />
+  <rect x="30" y="190" width="540" height="160" rx="4" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4" />
+  <g transform="translate(300, 275)" text-anchor="middle">
+    <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" fill="#6b7280" font-weight="500">
+      Project Preview Image
+    </text>
+    <text y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#9ca3af">
+      Add project screenshot in src/projects/ and update frontmatter
+    </text>
+  </g>
+</svg>
