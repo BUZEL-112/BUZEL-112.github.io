@@ -1,9 +1,15 @@
 logs:
+  - title: "Architecting a Scalable Live Streaming Platform"
+    date: 2026-09-08
+    summary: >
+      A comprehensive system design for high availability, low latency, and massive scale
+      across video ingestion, ABR transcoding, CDN distribution, and real-time chat.
+    link: "/writing/logs/re-architecting-live-streaming-platform"
+
   - title: "Log Entry: Initial Project Architecture"
     date: 2024-04-10
     summary: >
-      An overview of how this blog post is rendered directly from an HTML file
-      within the template.
+      An overview of how blog post logs are rendered directly within the template.
     link: "/writing/logs/sample-log"
 
 technology:

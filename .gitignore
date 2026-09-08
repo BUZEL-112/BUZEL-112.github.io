@@ -19,8 +19,10 @@ dist/
 *.key
 
 # Logs and debugging
-logs/
+/logs/
 *.log
+!src/logs/
+!src/routes/**/logs/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
