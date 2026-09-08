@@ -4,7 +4,7 @@ logs:
     summary: >
       An overview of how this blog post is rendered directly from an HTML file
       within the template.
-    link: "/writing/logs/sample-log"
+    link: "https://example.com"
 
 technology:
   - title: "[Article Title] Example Technical Post"
